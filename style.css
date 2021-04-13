@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+}
+
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header{
+    display:flex;
+    width: 100%;
+}
+
+.header__logo{
+    margin-top: 20px;
+    width: 50%;
+}
+
+
+.nav{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    color: azure;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav__link:before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:last-child:before{
+    content: none;
+}
+
+
+.nav__link:hover::before {
+    opacity: 1;
+}
+
+.nav__link:last-child {
+    padding: 6px 13px 6px 13px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    background-color: rgb(0, 0, 0);
+}
+/* Section
+====================================== */
+
+.section{
+    margin-top: 50px;
+}
+
+.section__content{
+    text-align: center;
+    margin-bottom: 150px;
+    color: rgb(255, 255, 255);
+}
+
+.section__tittle{
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px black;
+
+}
+
+.section__subtittle{
+    font-size: 20px;
+    text-shadow: 0px 0px 3px black;
+}
+
+.section__item{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section__films{
+    width: 33.33333%;
+    margin-bottom: 40px ;
+}
+
+.section__films__tittle{
+   margin: 12px 0;
+   font-size: 18px;
+   font-weight: 700;
+}
+
+.section__photo img{
+    width: 300px;
+    height: 300px;
+}
+
+.image{
+    height: 0px;
+}
+
+#photo{
+    height: 500px;
+    width: -webkit-fill-available;
+    object-fit: cover;
+}
+
